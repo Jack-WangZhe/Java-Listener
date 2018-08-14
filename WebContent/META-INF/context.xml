@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+ 	<!-- maxIdleSwap:session中的对象多长时间不使用就钝化(单位：分钟），注意钝化和销毁的概念完全不同 -->
+ 	<!-- directory:钝化后的对象的文件写到磁盘的哪个目录下配置钝化的对象文件在 work/catalina/localhost/钝化文件 -->
+	<Manager className="org.apache.catalina.session.PersistentManager" maxIdleSwap="1"><!-- Manager是处理内容的对象 -->
+		<Store className="org.apache.catalina.session.FileStore" directory="storeFile" /><!-- Store是做存储的对象 -->
+	</Manager>
+</Context>
